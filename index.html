@@ -3,30 +3,30 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Agenda Rol — El Códice de Campaña</title>
+<title>Agenda Rol — El Grimorio de las Sombras</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cinzel+Decorative:wght@700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <style>
   :root {
-    --parchment-0: #f4e8cf;
-    --parchment-1: #ead9b2;
-    --parchment-2: #dcc394;
-    --parchment-3: #c9ac77;
-    --parchment-edge: #8a6b3a;
-    --ink: #2a1b0c;
-    --ink-soft: #4a3420;
-    --ink-faded: #7a5a3a;
-    --gold: #b8893b;
-    --gold-deep: #8a6218;
-    --gold-bright: #e3c066;
-    --forest: #3c6b3a;
-    --forest-deep: #234421;
-    --amber: #c98a22;
-    --amber-deep: #8f5e10;
+    --parchment-0: #e6e0f4;
+    --parchment-1: #d0c8ec;
+    --parchment-2: #b8aede;
+    --parchment-3: #9a8ec8;
+    --parchment-edge: #6650a8;
+    --ink: #180e32;
+    --ink-soft: #2a1852;
+    --ink-faded: #60489a;
+    --gold: #8070c8;
+    --gold-deep: #4e36a0;
+    --gold-bright: #baaef0;
+    --forest: #1a7888;
+    --forest-deep: #0e4858;
+    --amber: #7850b8;
+    --amber-deep: #4a2898;
     --garnet: #8a2f2a;
     --garnet-deep: #5a1a18;
-    --wax: #6f1f1a;
+    --wax: #38166e;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
@@ -35,56 +35,56 @@
     color: var(--ink);
     min-height: 100vh;
     background:
-      radial-gradient(ellipse at 20% 10%, rgba(255,240,200,0.5) 0%, rgba(0,0,0,0) 55%),
-      radial-gradient(ellipse at 80% 90%, rgba(120,60,20,0.25) 0%, rgba(0,0,0,0) 60%),
-      radial-gradient(ellipse at center, #3a2817 0%, #1f140a 100%);
+      radial-gradient(ellipse at 20% 10%, rgba(160,120,255,0.35) 0%, rgba(0,0,0,0) 55%),
+      radial-gradient(ellipse at 80% 90%, rgba(60,20,160,0.3) 0%, rgba(0,0,0,0) 60%),
+      radial-gradient(ellipse at center, #1c0e40 0%, #080620 100%);
     background-attachment: fixed;
     overflow-x: hidden;
   }
   .parchment {
     position: relative;
     background:
-      radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 40%),
-      radial-gradient(ellipse at 70% 80%, rgba(138,107,58,0.22) 0%, rgba(138,107,58,0) 45%),
-      radial-gradient(circle at 15% 70%, rgba(90,60,20,0.15) 0%, rgba(90,60,20,0) 25%),
-      radial-gradient(circle at 85% 30%, rgba(90,60,20,0.12) 0%, rgba(90,60,20,0) 22%),
+      radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 40%),
+      radial-gradient(ellipse at 70% 80%, rgba(100,80,190,0.2) 0%, rgba(100,80,190,0) 45%),
+      radial-gradient(circle at 15% 70%, rgba(60,40,130,0.14) 0%, rgba(60,40,130,0) 25%),
+      radial-gradient(circle at 85% 30%, rgba(60,40,130,0.11) 0%, rgba(60,40,130,0) 22%),
       linear-gradient(135deg, var(--parchment-0) 0%, var(--parchment-1) 50%, var(--parchment-2) 100%);
-    box-shadow: inset 0 0 60px rgba(138,107,58,0.35), inset 0 0 8px rgba(42,27,12,0.4), 0 20px 50px rgba(0,0,0,0.55), 0 4px 12px rgba(0,0,0,0.4);
+    box-shadow: inset 0 0 60px rgba(100,80,190,0.28), inset 0 0 8px rgba(24,14,50,0.38), 0 20px 50px rgba(0,0,0,0.6), 0 4px 12px rgba(0,0,0,0.45);
   }
   .parchment::before {
     content: ""; position: absolute; inset: 0; pointer-events: none;
     background-image:
-      radial-gradient(circle at 12% 22%, rgba(90,60,20,0.18) 0%, rgba(0,0,0,0) 2%),
-      radial-gradient(circle at 78% 14%, rgba(90,60,20,0.14) 0%, rgba(0,0,0,0) 1.5%),
-      radial-gradient(circle at 38% 72%, rgba(90,60,20,0.15) 0%, rgba(0,0,0,0) 2%),
-      radial-gradient(circle at 88% 88%, rgba(90,60,20,0.17) 0%, rgba(0,0,0,0) 2.2%),
-      radial-gradient(circle at 5% 55%, rgba(90,60,20,0.13) 0%, rgba(0,0,0,0) 1.6%);
+      radial-gradient(circle at 12% 22%, rgba(60,40,120,0.18) 0%, rgba(0,0,0,0) 2%),
+      radial-gradient(circle at 78% 14%, rgba(60,40,120,0.14) 0%, rgba(0,0,0,0) 1.5%),
+      radial-gradient(circle at 38% 72%, rgba(60,40,120,0.15) 0%, rgba(0,0,0,0) 2%),
+      radial-gradient(circle at 88% 88%, rgba(60,40,120,0.17) 0%, rgba(0,0,0,0) 2.2%),
+      radial-gradient(circle at 5% 55%, rgba(60,40,120,0.13) 0%, rgba(0,0,0,0) 1.6%);
     mix-blend-mode: multiply; opacity: 0.7;
   }
   .parchment::after {
     content: ""; position: absolute; inset: 0; pointer-events: none;
     background-image:
-      repeating-linear-gradient(98deg, rgba(138,107,58,0.04) 0px, rgba(138,107,58,0.04) 1px, transparent 1px, transparent 3px),
-      repeating-linear-gradient(3deg, rgba(138,107,58,0.03) 0px, rgba(138,107,58,0.03) 1px, transparent 1px, transparent 5px);
+      repeating-linear-gradient(98deg, rgba(100,80,180,0.05) 0px, rgba(100,80,180,0.05) 1px, transparent 1px, transparent 3px),
+      repeating-linear-gradient(3deg, rgba(100,80,180,0.04) 0px, rgba(100,80,180,0.04) 1px, transparent 1px, transparent 5px);
   }
   .torn { filter: url(#rough); }
 
   /* ── HEADER ─────────────────────────────────────────── */
   .app-header { position: relative; padding: 20px 24px 16px; text-align: center; color: var(--gold-bright); }
-  .app-header h1 { margin: 0; font-family: "Cinzel Decorative","Cinzel",serif; font-weight: 900; font-size: clamp(22px,5vw,36px); letter-spacing: 0.12em; text-shadow: 0 2px 0 rgba(0,0,0,0.6), 0 0 20px rgba(227,192,102,0.35); }
-  .app-header .subtitle { margin-top: 4px; font-family: "IM Fell English",serif; font-style: italic; font-size: clamp(12px,3vw,16px); color: #d9b870; letter-spacing: 0.05em; opacity: 0.85; }
+  .app-header h1 { margin: 0; font-family: "Cinzel Decorative","Cinzel",serif; font-weight: 900; font-size: clamp(22px,5vw,36px); letter-spacing: 0.12em; text-shadow: 0 2px 0 rgba(0,0,0,0.6), 0 0 20px rgba(186,174,240,0.45); }
+  .app-header .subtitle { margin-top: 4px; font-family: "IM Fell English",serif; font-style: italic; font-size: clamp(12px,3vw,16px); color: #c0b0f0; letter-spacing: 0.05em; opacity: 0.85; }
   .ornament { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 8px; color: var(--gold); }
   .ornament .line { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent); }
   .ornament svg { width: 24px; height: 24px; }
 
   /* ── SYNC BAR ────────────────────────────────────────── */
   .sync-bar { position: fixed; bottom: 16px; right: 16px; z-index: 100; display: flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 20px; font-family: "Cinzel",serif; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
-  .sync-bar.synced  { background: rgba(35,68,33,0.92);  border-color: var(--forest-deep); color: #a8d8a0; }
-  .sync-bar.syncing { background: rgba(42,27,12,0.92);  border-color: var(--gold-deep);   color: var(--gold-bright); }
+  .sync-bar.synced  { background: rgba(14,72,88,0.92);  border-color: var(--forest-deep); color: #80d8e8; }
+  .sync-bar.syncing { background: rgba(24,14,50,0.92);  border-color: var(--gold-deep);   color: var(--gold-bright); }
   .sync-bar.error   { background: rgba(90,26,24,0.92);  border-color: var(--garnet-deep); color: #ffb8b0; }
-  .sync-bar.notoken { background: rgba(42,27,12,0.92);  border-color: var(--parchment-edge); color: var(--parchment-1); }
+  .sync-bar.notoken { background: rgba(24,14,50,0.92);  border-color: var(--parchment-edge); color: var(--parchment-1); }
   .sync-dot { width: 7px; height: 7px; border-radius: 50%; }
-  .sync-bar.synced  .sync-dot { background: #6aa85e; }
+  .sync-bar.synced  .sync-dot { background: #4ab8c8; }
   .sync-bar.syncing .sync-dot { background: var(--gold-bright); animation: pulse 0.8s infinite; }
   .sync-bar.error   .sync-dot { background: #c8564d; }
   .sync-bar.notoken .sync-dot { background: var(--parchment-3); }
@@ -95,7 +95,7 @@
     position: fixed; bottom: 16px; left: 16px; z-index: 100;
     width: 44px; height: 44px; border-radius: 50%;
     border: 1px solid var(--gold-deep);
-    background: radial-gradient(circle at 35% 30%, #3a2817 0%, #1f140a 100%);
+    background: radial-gradient(circle at 35% 30%, #1c0e40 0%, #080620 100%);
     color: var(--gold-bright); font-size: 20px; cursor: pointer;
     display: flex; align-items: center; justify-content: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(227,192,102,0.2);
@@ -148,8 +148,8 @@
   .modal-actions { display: flex; gap: 10px; margin-top: 18px; justify-content: center; }
   .btn { font-family: "Cinzel",serif; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; font-size: 12px; padding: 9px 20px; border-radius: 3px; cursor: pointer; border: 1px solid var(--gold-deep); background: linear-gradient(180deg, var(--parchment-0) 0%, var(--parchment-2) 100%); color: var(--ink); transition: all 0.15s; }
   .btn:hover { background: linear-gradient(180deg, var(--parchment-1) 0%, var(--parchment-3) 100%); box-shadow: 0 2px 6px rgba(0,0,0,0.25); }
-  .btn.primary { background: linear-gradient(180deg, #b8893b 0%, #8a6218 100%); color: #fff6dc; border-color: var(--gold-deep); text-shadow: 0 1px 0 rgba(0,0,0,0.3); }
-  .btn.primary:hover { background: linear-gradient(180deg, #c89a4d 0%, #9a7220 100%); }
+  .btn.primary { background: linear-gradient(180deg, #8070c8 0%, #4e36a0 100%); color: #e6e0f4; border-color: var(--gold-deep); text-shadow: 0 1px 0 rgba(0,0,0,0.3); }
+  .btn.primary:hover { background: linear-gradient(180deg, #9080d8 0%, #5e46b0 100%); }
   .btn.ghost { background: transparent; border-color: var(--ink-faded); }
   .btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
@@ -165,11 +165,11 @@
   .current-user .who .name { font-family: "Cinzel",serif; font-weight: 700; font-size: 17px; letter-spacing: 0.07em; color: var(--ink); }
   .view-tabs { display: inline-flex; background: rgba(42,27,12,0.12); border: 1px solid var(--parchment-edge); border-radius: 3px; padding: 3px; }
   .view-tabs button { font-family: "Cinzel",serif; font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 7px 14px; border: none; background: transparent; color: var(--ink-soft); cursor: pointer; border-radius: 2px; }
-  .view-tabs button.active { background: linear-gradient(180deg, #b8893b, #8a6218); color: #fff6dc; box-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+  .view-tabs button.active { background: linear-gradient(180deg, #8070c8, #4e36a0); color: #e6e0f4; box-shadow: 0 1px 3px rgba(0,0,0,0.4); }
   .topbar-actions { display: flex; gap: 8px; align-items: center; }
-  .seal-btn { display: inline-flex; align-items: center; gap: 10px; font-family: "Cinzel",serif; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; font-size: 12px; padding: 10px 20px 10px 16px; border-radius: 3px; cursor: pointer; border: 1px solid var(--wax); background: linear-gradient(180deg, #a83832 0%, #6f1f1a 100%); color: #fff6dc; text-shadow: 0 1px 0 rgba(0,0,0,0.4); box-shadow: 0 4px 12px rgba(0,0,0,0.35); transition: all 0.15s; }
-  .seal-btn:hover { background: linear-gradient(180deg, #c24942 0%, #842620 100%); transform: translateY(-1px); }
-  .seal-btn .wax-dot { width: 18px; height: 18px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #e3c066 0%, #8a6218 70%); box-shadow: inset -1px -2px 4px rgba(0,0,0,0.35); }
+  .seal-btn { display: inline-flex; align-items: center; gap: 10px; font-family: "Cinzel",serif; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; font-size: 12px; padding: 10px 20px 10px 16px; border-radius: 3px; cursor: pointer; border: 1px solid var(--wax); background: linear-gradient(180deg, #6040b8 0%, #38166e 100%); color: #e6e0f4; text-shadow: 0 1px 0 rgba(0,0,0,0.4); box-shadow: 0 4px 12px rgba(0,0,0,0.4), 0 0 14px rgba(128,112,200,0.25); transition: all 0.15s; }
+  .seal-btn:hover { background: linear-gradient(180deg, #7050c8 0%, #48207e 100%); transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0,0,0,0.45), 0 0 20px rgba(128,112,200,0.4); }
+  .seal-btn .wax-dot { width: 18px; height: 18px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #baaef0 0%, #4e36a0 70%); box-shadow: inset -1px -2px 4px rgba(0,0,0,0.35); }
 
   /* ── WEEK NAV ────────────────────────────────────────── */
   .week-nav { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 8px 16px; margin-bottom: 10px; background: rgba(244,232,207,0.7); border: 1px solid var(--parchment-edge); border-radius: 3px; }
@@ -184,8 +184,8 @@
   .legend-item { display: flex; align-items: center; gap: 6px; }
   .legend-swatch { width: 16px; height: 16px; border-radius: 2px; border: 1px solid var(--ink-faded); flex-shrink: 0; }
   .sw-empty { background: rgba(244,232,207,0.3); border-style: dashed; }
-  .sw-yes   { background: linear-gradient(180deg, #4e8745 0%, #2d5f2a 100%); border-color: var(--forest-deep); }
-  .sw-maybe { background: linear-gradient(180deg, #e3a53a 0%, #a3741a 100%); border-color: var(--amber-deep); }
+  .sw-yes   { background: linear-gradient(180deg, #4ab8c8 0%, #1a7888 100%); border-color: var(--forest-deep); }
+  .sw-maybe { background: linear-gradient(180deg, #9870d8 0%, #5840a0 100%); border-color: var(--amber-deep); }
   .sw-no    { background: linear-gradient(180deg, #a93d36 0%, #6a1e1a 100%); border-color: var(--garnet-deep); }
   .legend .hint { margin-left: auto; font-style: italic; color: var(--ink-faded); font-size: 13px; }
 
@@ -206,8 +206,8 @@
   }
   .cell::before { content: ""; position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, rgba(138,107,58,0.06) 0 1px, transparent 1px 6px); pointer-events: none; }
   .cell:hover { background: rgba(244,232,207,0.65); border-color: var(--gold-deep); }
-  .cell.yes   { background: linear-gradient(180deg, #6aa85e 0%, #3a6f34 100%); border-color: var(--forest-deep); box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0,0,0,0.2); }
-  .cell.maybe { background: linear-gradient(180deg, #e8b14b 0%, #b07c1c 100%); border-color: var(--amber-deep); box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -2px 0 rgba(0,0,0,0.2); }
+  .cell.yes   { background: linear-gradient(180deg, #4ab8c8 0%, #1a7888 100%); border-color: var(--forest-deep); box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0,0,0,0.2); }
+  .cell.maybe { background: linear-gradient(180deg, #9870d8 0%, #5840a0 100%); border-color: var(--amber-deep); box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), inset 0 -2px 0 rgba(0,0,0,0.2); }
   .cell.no    { background: linear-gradient(180deg, #b84b43 0%, #72221d 100%); border-color: var(--garnet-deep); box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), inset 0 -2px 0 rgba(0,0,0,0.25); }
   .cell.yes::before, .cell.maybe::before, .cell.no::before { opacity: 0; }
   .cell .state-icon { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: rgba(255,245,220,0.9); font-family: "Cinzel Decorative",serif; font-weight: 900; font-size: 15px; text-shadow: 0 1px 0 rgba(0,0,0,0.35); pointer-events: none; }
@@ -215,9 +215,9 @@
   .cell .stack { position: absolute; inset: 2px; display: flex; align-items: center; justify-content: center; gap: 2px; flex-wrap: wrap; }
   .cell .avatar-dot { width: 16px; height: 16px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center; font-family: "Cinzel",serif; font-weight: 800; font-size: 9px; color: var(--ink); background: var(--parchment-2); flex-shrink: 0; }
   .cell .avatar-dot img { width: 100%; height: 100%; object-fit: cover; }
-  .cell .avatar-dot.yes   { box-shadow: 0 0 0 1.5px #6aa85e, 0 0 0 2.5px var(--forest-deep); }
-  .cell .avatar-dot.maybe { box-shadow: 0 0 0 1.5px #e8b14b, 0 0 0 2.5px var(--amber-deep); }
-  .cell.all-available { background: linear-gradient(180deg, rgba(106,168,94,0.9) 0%, rgba(58,111,52,0.85) 100%); border-color: var(--forest-deep); box-shadow: inset 0 0 0 1px rgba(227,192,102,0.7), 0 0 10px rgba(227,192,102,0.3); }
+  .cell .avatar-dot.yes   { box-shadow: 0 0 0 1.5px #4ab8c8, 0 0 0 2.5px var(--forest-deep); }
+  .cell .avatar-dot.maybe { box-shadow: 0 0 0 1.5px #9870d8, 0 0 0 2.5px var(--amber-deep); }
+  .cell.all-available { background: linear-gradient(180deg, rgba(74,184,200,0.9) 0%, rgba(26,120,136,0.85) 100%); border-color: var(--forest-deep); box-shadow: inset 0 0 0 1px rgba(186,174,240,0.7), 0 0 10px rgba(186,174,240,0.35); }
   .cell.all-available::after { content: "★"; position: absolute; top: 1px; right: 2px; font-size: 10px; color: var(--gold-bright); }
   .tooltip { position: fixed; pointer-events: none; z-index: 80; background: #f4e8cf; border: 1px solid var(--gold-deep); box-shadow: 0 6px 20px rgba(0,0,0,0.5); padding: 8px 12px; border-radius: 3px; font-family: "EB Garamond",serif; font-size: 13px; color: var(--ink); min-width: 160px; }
   .tooltip .tt-title { font-family: "Cinzel",serif; font-weight: 700; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); border-bottom: 1px solid rgba(138,107,58,0.5); padding-bottom: 4px; margin-bottom: 6px; }
@@ -225,18 +225,18 @@
   .tooltip .tt-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
 
   /* ── PACT OVERLAY ────────────────────────────────────── */
-  .pact-overlay { position: fixed; inset: 0; z-index: 200; background: radial-gradient(ellipse at center, #1a0e06 0%, #000 80%); display: flex; flex-direction: column; align-items: center; justify-content: center; animation: pactFadeIn 0.6s ease; overflow: hidden; }
+  .pact-overlay { position: fixed; inset: 0; z-index: 200; background: radial-gradient(ellipse at center, #1a0840 0%, #04020e 80%); display: flex; flex-direction: column; align-items: center; justify-content: center; animation: pactFadeIn 0.6s ease; overflow: hidden; }
   @keyframes pactFadeIn { from{opacity:0} to{opacity:1} }
-  .pact-overlay::before { content: ""; position: absolute; inset: -20%; background: radial-gradient(circle at 20% 30%, rgba(138,47,42,0.25) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(184,137,59,0.12) 0%, transparent 50%); pointer-events: none; }
-  .pact-overlay::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle at 10% 20%, rgba(255,220,150,0.04) 0%, transparent 2%), radial-gradient(circle at 70% 30%, rgba(255,220,150,0.03) 0%, transparent 1.5%), radial-gradient(circle at 50% 80%, rgba(255,220,150,0.05) 0%, transparent 2%); pointer-events: none; animation: emberFlicker 3s infinite alternate; }
-  @keyframes emberFlicker { from{opacity:0.6} to{opacity:1} }
-  .pact-title { font-family: "Cinzel Decorative","Cinzel",serif; font-weight: 900; font-size: clamp(24px,5vw,60px); letter-spacing: 0.12em; color: #e3c066; text-align: center; padding: 0 24px; max-width: 900px; line-height: 1.2; text-shadow: 0 0 20px rgba(227,192,102,0.6), 0 0 60px rgba(184,137,59,0.45), 0 4px 0 rgba(0,0,0,0.6); animation: titleGlow 2.6s ease-in-out infinite alternate, titleRise 1s ease-out; position: relative; z-index: 3; }
-  @keyframes titleGlow { from{text-shadow:0 0 20px rgba(227,192,102,0.4),0 0 40px rgba(184,137,59,0.3),0 4px 0 rgba(0,0,0,0.6)} to{text-shadow:0 0 40px rgba(227,192,102,0.85),0 0 80px rgba(184,137,59,0.6),0 4px 0 rgba(0,0,0,0.6)} }
+  .pact-overlay::before { content: ""; position: absolute; inset: -20%; background: radial-gradient(circle at 20% 30%, rgba(80,40,180,0.3) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(128,96,220,0.18) 0%, transparent 50%); pointer-events: none; }
+  .pact-overlay::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(circle at 10% 20%, rgba(160,140,255,0.06) 0%, transparent 2%), radial-gradient(circle at 70% 30%, rgba(160,140,255,0.04) 0%, transparent 1.5%), radial-gradient(circle at 50% 80%, rgba(160,140,255,0.07) 0%, transparent 2%); pointer-events: none; animation: emberFlicker 3s infinite alternate; }
+  @keyframes emberFlicker { from{opacity:0.5} to{opacity:1} }
+  .pact-title { font-family: "Cinzel Decorative","Cinzel",serif; font-weight: 900; font-size: clamp(24px,5vw,60px); letter-spacing: 0.12em; color: #baaef0; text-align: center; padding: 0 24px; max-width: 900px; line-height: 1.2; text-shadow: 0 0 20px rgba(186,174,240,0.7), 0 0 60px rgba(128,96,220,0.55), 0 4px 0 rgba(0,0,0,0.7); animation: titleGlow 2.6s ease-in-out infinite alternate, titleRise 1s ease-out; position: relative; z-index: 3; }
+  @keyframes titleGlow { from{text-shadow:0 0 20px rgba(186,174,240,0.5),0 0 40px rgba(128,96,220,0.35),0 4px 0 rgba(0,0,0,0.7)} to{text-shadow:0 0 40px rgba(186,174,240,0.95),0 0 90px rgba(128,96,220,0.7),0 4px 0 rgba(0,0,0,0.7)} }
   @keyframes titleRise { from{opacity:0;transform:translateY(30px) scale(0.95)} to{opacity:1;transform:translateY(0) scale(1)} }
-  .pact-ornament { display: flex; align-items: center; gap: 18px; color: #8a6218; margin-top: 18px; margin-bottom: 20px; animation: fadeInSlow 1.6s ease 0.4s both; z-index: 3; }
-  .pact-ornament .line { width: 120px; height: 1px; background: linear-gradient(90deg, transparent, #b8893b 50%, transparent); }
-  .pact-ornament .star { font-size: 20px; color: #b8893b; }
-  .pact-sub { font-family: "IM Fell English",serif; font-style: italic; color: #c49a55; font-size: 16px; margin-top: 16px; letter-spacing: 0.08em; animation: fadeInSlow 2s ease 1.8s both; text-align: center; z-index: 3; }
+  .pact-ornament { display: flex; align-items: center; gap: 18px; color: #4e36a0; margin-top: 18px; margin-bottom: 20px; animation: fadeInSlow 1.6s ease 0.4s both; z-index: 3; }
+  .pact-ornament .line { width: 120px; height: 1px; background: linear-gradient(90deg, transparent, #8070c8 50%, transparent); }
+  .pact-ornament .star { font-size: 20px; color: #8070c8; }
+  .pact-sub { font-family: "IM Fell English",serif; font-style: italic; color: #9888d8; font-size: 16px; margin-top: 16px; letter-spacing: 0.08em; animation: fadeInSlow 2s ease 1.8s both; text-align: center; z-index: 3; }
   @keyframes fadeInSlow { from{opacity:0} to{opacity:1} }
 
   /* ── PACT CONTRACT ───────────────────────────────────── */
@@ -246,8 +246,8 @@
   /* ── MISC ────────────────────────────────────────────── */
   .screen { animation: fadeIn 0.35s ease; }
   @keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
-  .seal { display: inline-block; width: 30px; height: 30px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #a83832 0%, #6f1f1a 60%, #3d0f0c 100%); box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset -2px -3px 8px rgba(0,0,0,0.4); position: relative; vertical-align: middle; }
-  .seal::after { content: "✦"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #f4c05a; font-size: 15px; }
+  .seal { display: inline-block; width: 30px; height: 30px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #8070c8 0%, #4e36a0 60%, #2a1860 100%); box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset -2px -3px 8px rgba(0,0,0,0.4); position: relative; vertical-align: middle; }
+  .seal::after { content: "✦"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #baaef0; font-size: 15px; }
 
   /* ── MOBILE ──────────────────────────────────────────── */
   @media (max-width: 640px) {
@@ -381,22 +381,26 @@ async function ghWrite(token, data, sha) {
 
 // ── 8-bit Music ────────────────────────────────────────────
 const MELODY = [
-  [220.0,1.5],[196.0,0.5],[220.0,1.0],[261.6,2.0],[0,0.5],
-  [246.9,1.0],[220.0,1.5],[196.0,0.5],[174.6,2.0],[0,0.5],
-  [164.8,1.0],[196.0,1.0],[220.0,2.0],[0,1.0],
-  [174.6,1.0],[164.8,1.0],[146.8,2.0],[0,0.5],
-  [130.8,1.0],[146.8,1.0],[164.8,1.0],[196.0,1.0],[220.0,3.0],[0,2.0],
+  [220.0,3.0],[0,0.5],[196.0,1.5],[174.6,4.0],[0,0.5],
+  [164.8,2.0],[174.6,1.0],[196.0,1.5],[220.0,3.5],[0,0.5],
+  [261.6,2.0],[246.9,1.0],[220.0,1.5],[196.0,1.0],[174.6,3.0],[0,0.5],
+  [164.8,2.5],[174.6,1.5],[196.0,2.0],[220.0,5.0],[0,1.5],
+  [293.7,2.0],[261.6,1.5],[246.9,2.0],[220.0,1.0],[196.0,1.0],[174.6,5.0],[0,2.0],
 ];
 const BASS = [
-  [110.0,4],[73.4,4],[82.4,4],[110.0,4],
-  [98.0,4],[73.4,4],[82.4,8],
+  [110.0,6],[82.4,2],
+  [87.3,6],[82.4,2],
+  [73.4,8],
+  [55.0,4],[82.4,4],
+  [87.3,6],[73.4,2],
+  [110.0,8],
 ];
 let audioCtx = null;
 let musicPlaying = false;
 let musicScheduler = null;
 let melodyIdx = 0, bassIdx = 0;
 let melodyTime = 0, bassTime = 0;
-const BPM = 65, BEAT = 60/BPM;
+const BPM = 50, BEAT = 60/BPM;
 
 function ensureCtx() {
   if (!audioCtx) audioCtx = new (window.AudioContext||window.webkitAudioContext)();
@@ -533,10 +537,10 @@ function UserSelect({ users, onSelect, onUpdateUser, onCreateUser, onDeleteUser 
       <header className="app-header">
         <div className="ornament"><span className="line"/><FleurOrnament/><span className="line"/></div>
         <h1>Agenda Rol</h1>
-        <div className="subtitle">El Códice de Convocatoria · Elige tu estandarte</div>
+        <div className="subtitle">El Grimorio de las Sombras · Elige tu alter ego</div>
         <div className="ornament"><span className="line"/><span className="seal"/><span className="line"/></div>
       </header>
-      <p className="prompt">¿Quién se une a la partida esta vez?</p>
+      <p className="prompt">¿Qué sombra responde al llamado del Grimorio?</p>
       <div className="users-grid">
         {users.map(u => (
           <div key={u.id} className="user-card parchment torn" onClick={e => {
@@ -555,7 +559,7 @@ function UserSelect({ users, onSelect, onUpdateUser, onCreateUser, onDeleteUser 
         <div className="user-card new-user-card parchment torn" onClick={()=>setCreating(true)}>
           <div className="portrait-frame" style={{width:140,height:140}}><div className="new-user-plus">+</div></div>
           <div className="user-name">Nuevo</div>
-          <div className="user-title">Forjar nuevo aventurero</div>
+          <div className="user-title">Invocar nuevo aventurero</div>
         </div>
       </div>
       {creating && <CreateUserModal onCancel={()=>setCreating(false)} onCreate={u=>{onCreateUser(u);setCreating(false);onSelect(u.id);}}/>}
@@ -719,7 +723,7 @@ function CalendarScreen({ users, currentUserId, schedules, setSchedules, onSwitc
       <header className="app-header">
         <div className="ornament"><span className="line"/><FleurOrnament/><span className="line"/></div>
         <h1>Agenda Rol</h1>
-        <div className="subtitle">El Códice del Cónclave · Marca tus horas</div>
+        <div className="subtitle">El Grimorio del Cónclave · Marca tu destino</div>
       </header>
 
       <div className="cal-topbar">
@@ -738,7 +742,7 @@ function CalendarScreen({ users, currentUserId, schedules, setSchedules, onSwitc
         </div>
         <div className="topbar-actions">
           {view==="mine" && <button className="btn ghost" onClick={()=>{if(!confirm("¿Borrar tu agenda entera?"))return;setSchedules(prev=>({...prev,[currentUserId]:{}}));}}>Limpiar</button>}
-          {view==="mine" && <button className="seal-btn" onClick={onSealPact}><span className="wax-dot"></span>Sellar Pacto</button>}
+          {view==="mine" && <button className="seal-btn" onClick={onSealPact}><span className="wax-dot"></span>Forjar Juramento</button>}
           <button className="btn" onClick={handleSwitchUser}>Cambiar</button>
         </div>
       </div>
@@ -846,17 +850,17 @@ function CalendarScreen({ users, currentUserId, schedules, setSchedules, onSwitc
               </svg>
             </div>
             <h2 style={{color:"var(--garnet-deep)",fontSize:19,lineHeight:1.3,letterSpacing:"0.06em"}}>
-              ¡Tu Pacto Aguarda en las Sombras!
+              ¡El Grimorio Reclama tu Juramento!
             </h2>
             <div className="modal-sub" style={{lineHeight:1.8,fontSize:15}}>
-              Tus marcas en el <em>Códice de Campaña</em> aún no<br/>
-              han sido grabadas con el sello del cónclave.<br/>
-              Si partes sin sellar, tus horas se perderán<br/>
-              en el vacío eterno del olvido.
+              Tus marcas en el <em>Grimorio de Sombras</em> aún no<br/>
+              han sido grabadas con el sello arcano.<br/>
+              Si partes sin forjar el juramento, tu destino<br/>
+              se perderá en la oscuridad eterna.
             </div>
             <div className="modal-actions">
               <button className="btn primary" onClick={()=>setShowAbandon(false)}>
-                ⚔ Regresar y Sellar
+                ⚔ Regresar y Forjar
               </button>
               <button className="btn ghost" style={{borderColor:"var(--garnet-deep)",color:"var(--garnet-deep)"}}
                 onClick={handleAbandon}>
@@ -874,7 +878,7 @@ function CalendarScreen({ users, currentUserId, schedules, setSchedules, onSwitc
 function PactOverlay() {
   return (
     <div className="pact-overlay">
-      <div className="pact-title">Tu compromiso<br/>ha sido sellado</div>
+      <div className="pact-title">Tu destino<br/>ha sido forjado</div>
       <div className="pact-ornament"><span className="line"></span><span className="star">✦</span><span className="line"></span></div>
       <svg className="pact-contract" viewBox="0 0 520 460" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -882,7 +886,7 @@ function PactOverlay() {
             <stop offset="0%" stopColor="#f4e8cf"/><stop offset="50%" stopColor="#e6d3a6"/><stop offset="100%" stopColor="#c9ac77"/>
           </linearGradient>
           <radialGradient id="waxGrad" cx="0.35" cy="0.3" r="0.75">
-            <stop offset="0%" stopColor="#c84640"/><stop offset="55%" stopColor="#7a1f1a"/><stop offset="100%" stopColor="#3d0f0c"/>
+            <stop offset="0%" stopColor="#8070c8"/><stop offset="55%" stopColor="#4e36a0"/><stop offset="100%" stopColor="#22105a"/>
           </radialGradient>
           <filter id="paperNoise">
             <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
@@ -892,7 +896,7 @@ function PactOverlay() {
         </defs>
         <path d="M 40 30 C 60 22, 120 28, 180 24 C 260 18, 340 30, 420 22 C 460 20, 480 28, 488 50 L 486 200 C 490 260, 478 320, 488 400 C 482 420, 460 430, 420 428 C 340 432, 260 426, 180 432 C 120 434, 70 428, 40 426 C 24 418, 30 360, 28 280 C 32 200, 22 120, 32 60 Z" fill="url(#parchGrad)" stroke="#8a6b3a" strokeWidth="1.2"/>
         <path d="M 40 30 C 60 22, 120 28, 180 24 C 260 18, 340 30, 420 22 C 460 20, 480 28, 488 50 L 486 200 C 490 260, 478 320, 488 400 C 482 420, 460 430, 420 428 C 340 432, 260 426, 180 432 C 120 434, 70 428, 40 426 C 24 418, 30 360, 28 280 C 32 200, 22 120, 32 60 Z" fill="url(#paperNoise)" opacity="0.9"/>
-        <text x="260" y="72" textAnchor="middle" fontFamily="Cinzel Decorative, serif" fontWeight="900" fontSize="22" fill="#2a1b0c" letterSpacing="4">PACTO DE CÓNCLAVE</text>
+        <text x="260" y="72" textAnchor="middle" fontFamily="Cinzel Decorative, serif" fontWeight="900" fontSize="22" fill="#180e32" letterSpacing="4">GRIMORIO DE SOMBRAS</text>
         <line x1="140" y1="86" x2="380" y2="86" stroke="#8a6218" strokeWidth="1"/>
         <line x1="160" y1="92" x2="360" y2="92" stroke="#8a6218" strokeWidth="0.6"/>
         {[120,138,156,174,192,210,228,246,264].map((y,i) => <line key={i} x1={70+(i%2)*4} y1={y} x2={i===8?280:440-(i%3)*20} y2={y} stroke="#4a3420" strokeWidth="1" opacity="0.55" strokeLinecap="round"/>)}
@@ -909,7 +913,7 @@ function PactOverlay() {
           <ellipse cx="-14" cy="-16" rx="14" ry="8" fill="rgba(255,220,180,0.25)"/>
         </g>
       </svg>
-      <div className="pact-sub">— Que los dioses atestigüen esta palabra —</div>
+      <div className="pact-sub">— Que las sombras atestigüen este juramento —</div>
     </div>
   );
 }
